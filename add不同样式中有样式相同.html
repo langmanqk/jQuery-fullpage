@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <title></title>
+    <style>
+        div{width:100px;height:100px;border:1px solid yellow}
+    </style>
+
+</head>
+<body>
+<div>ere</div>
+<p>sssssssss</p>
+<script type="text/javascript">
+    $("div").click(function() {
+        $("div").css("border", "2px solid red")
+          .add("p")
+          .css("background", "yellow");
+    })
+</script>
+</body>
+</html>

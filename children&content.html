@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <title></title>
+    <style>
+        body { font-size:16px; font-weight:bolder; }
+        p { margin:5px 0; }
+    </style>
+</head>
+<body>
+    <div>
+        <span>Hello</span>
+            <p class="selected a">children()选取子<a>aaaa</a>元素标签不含文本节点</p>
+            <div class="selected b">contents()选取所有子节点</div>
+
+        <p>And One Last Time</p>
+    </div>
+
+<script>
+    $("div").children(".selected").css("color", "blue");
+    $("div").contents(".selected").css("background", "pink");
+    $(".a").after("节点："+$("div").children().length)
+    $(".b").after("节点："+$("div").contents().length)
+</script>
+</body>
+</html>

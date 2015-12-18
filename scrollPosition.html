@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script src="js/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $("button").click(function(){$("div").scrollLeft(100);});
+      $(".btn2").click(function(){$("div").scrollTop(100);});
+      $(".btn3").click(function(){alert($("div").scrollTop()+" px");});
+    });
+  </script>
+</head>
+<body>
+<div style="border:1px solid black;width:300px;height:200px;overflow:auto">
+  The longest word in the english dictionary is: pneumonoultramicroscopicsilicovolcanoconiosis Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores distinctio doloribus, ex illo impedit ipsam, magnam modi natus nesciunt praesentium qui rem, rerum saepe sequi tempora tempore volupicsilicovolcanoconiosis Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores distinctio doloribus, ex illo impedit ipsam, magnam modi natus nesciunt praesentium qui rem, rerum saepe sequi tempora tempore volupicsilicovolcanoconiosis Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores distinctio doloribus, ex illo impedit ipsam, magnam modi natus nesciunt praesentium qui rem, rerum saepe sequi tempora tempore volupicsilicovolcanoconiosis Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores distinctio doloribus, ex illo impedit ipsam, magnam modi natus nesciunt praesentium qui rem, rerum saepe sequi tempora tempore volupicsilicovolcanoconiosis Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores distinctio doloribus, ex illo impedit ipsam, magnam modi natus nesciunt praesentium qui rem, rerum saepe sequi tempora tempore volupicsilicovolcanoconiosis Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores distinctio doloribus, ex illo impedit ipsam, magnam modi natus nesciunt praesentium qui rem, rerum saepe sequi tempora tempore voluptatem voluptatum? Repellat.
+</div>
+<button class="btn1">把滚动条的水平位置设置为 100px</button>
+<br />
+<button class="btn2">把 scroll top offset 设置为 100px</button>
+<br />
+<button class="btn3">获得 scroll top offset</button>
+</body>
+</html>

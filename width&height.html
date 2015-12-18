@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <title></title>
+    <style>#a{background:yellow;border:2px dotted red;width:100px;height:100px;margin:20px;padding:30px;}</style>
+</head>
+<body>
+<div id="a"></div>
+<span id="b"></span>
+<script type="text/javascript">
+    var w=$("#a").width();
+    var h=$("#a").height();
+    var w1=$("#a").innerWidth();
+    var h1=$("#a").innerHeight();
+    var w2=$("#a").outerWidth();
+    var h2=$("#a").outerHeight();
+    var w3=$("#a").outerWidth(true);
+    var h3=$("#a").outerHeight(true);
+    $("#b").html("元素的宽度width()（不包括内边距、边框或外边距）:  width:" +w+"  ;height:"+h+"<br>"+
+      "元素的宽度innerWidth()（包括内边距）:  width:"+w1+" ;height:"+h1+"<br>"+
+      "元素的宽度outerWidth()（包括内边距和边框）:  width:"+w2+" ;height:"+h2+"<br>"+
+      "元素的宽度outerWidth(true)（包括内边距、边框和外边距）:  width:"+w3+" ;height:"+h3);
+
+    //可设置高度
+    $("#a").click(function(){
+        $("#a").width(300)
+    })
+</script>
+</body>
+</html>

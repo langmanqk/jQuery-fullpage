@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <title></title>
+    <script>
+//可以通过全名替代，也可以把它存入变量
+//      var jq = $.noConflict();
+        $.noConflict();
+        jQuery(document).ready(function(){
+            jQuery("button").click(function(){
+                jQuery("p").text("jQuery 仍在运行！");
+            });
+        });
+    </script>
+</head>
+
+<body>
+<p>这是一个段落。</p>
+<button>测试 jQuery</button>
+</body>
+</html>

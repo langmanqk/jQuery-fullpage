@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <title></title>
+</head>
+<body>
+
+<script type="text/javascript">
+    //将 span 选择器限定到 this 这个环境中，只有被点击元素中的 span 会得到附加的 class。
+    // $("span", this) 等价于 $(this).find("span")。
+    $("div.foo").click(function() {
+        $("span", this).addClass("bar");
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script src="js/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript">
+/*  (只有数字值可创建动画，字符串值无法创建动画，字符值的动画交由队列执行)
+如去除属性和切换kf属性，可使用:
+$("div").animate({height:'toggle' })
+可以定义相对值（该值相对于元素的当前值）。需要在值的前面加上 += 或 -=:
+$("div").animate({height:'+=150px'})
+
+$(selector).animate(styles,speed,easing,callback)
+
+ backgroundPosition    borderWidth
+ borderBottomWidth     borderLeftWidth
+ borderRightWidth      borderTopWidth
+ borderSpacing         margin
+ marginBottom          marginLeft
+ marginRight           marginTop
+ outlineWidth          padding
+ paddingBottom         paddingLeft
+ paddingRight          paddingTop
+ height                width
+ maxHeight             maxWidth
+ minHeight             minWidth
+ font                  fontSize
+ bottom                left
+ right                 top
+ letterSpacing         wordSpacing
+ lineHeight            textIndent
+ */
+    $(document).ready(function () {
+      $("#start").click(function () {
+        $("#box").animate({height: 300}, "slow");
+        $("#box").animate({width: 300}, "slow");
+        $("#box").queue(function () {
+          $(this).css("background-color", "red");
+          $(this).dequeue();
+        });
+        $("#box").animate({height: 100}, "slow");
+        $("#box").animate({width: 100}, "slow");
+      });
+//取消动画队列
+      $("#stop").click(function () {
+        $("#box").clearQueue();
+      });
+    });
+  </script>
+  <title></title>
+</head>
+<body>
+  <p>
+    <button id="start">Start Animation</button>
+    <button id="stop">Stop Animation</button>
+  </p>
+  <div id="box" style="background:#98bf21;height:100px;width:100px;position:relative">
+  </div>
+</body>
+</html>

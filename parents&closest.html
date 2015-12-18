@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <title></title>
+</head>
+<body>
+<ul id="one" class="level-1">
+    <li class="item-i">I</li>
+    <li id="ii" class="item-ii">II
+        <ul class="level-2">
+            <li class="item-a">A</li>
+            <li class="item-b">B
+                <ul class="level-3">
+                    <li class="item-1">1</li>
+                    <li class="item-2">2</li>
+                    <li class="item-3">3</li>
+                </ul>
+            </li>
+            <li class="item-c">C</li>
+        </ul>
+    </li>
+    <li class="item-iii">III</li>
+</ul>
+<script>
+
+//    .closest(),从当前元素开始,零个或一个元素
+//      .parents(),从父元素开始,零个、一个或多个
+    $('li.item-a').closest('ul').css('background-color', 'red');
+
+//以上代码会改变 level-2 <ul> 的颜色，因为它既是列表项 A 的第一个 <ul> 祖先，同时也是列表项 II 的后代。它不会改变 level-1 <ul> 的颜色，因为它不是 list item II 的后代。
+
+//var listItemII = document.getElementById('ii');
+//$('li.item-a').closest('ul', listItemII).css('background-color', 'red');
+//$('li.item-a').closest('#one', listItemII).css('background-color', 'green');
+</script>
+</body>
+</html>

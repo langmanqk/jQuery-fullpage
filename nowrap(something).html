@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script src="js/jquery-1.11.3.min.js"></script>
+  <style type="text/css">
+    div{background-color:yellow;padding:10px;}
+  </style>
+  <title></title>
+</head>
+<body>
+  <p>This is a paragraph.</p>
+  <button id="a"> 包裹或解开 p 元素</button>
+
+  <script type="text/javascript">
+      $("#a").toggle(
+        function () {$("p").wrap("<div></div>")},
+        function () {$("p").unwrap()}
+      );
+
+
+  </script>
+</body>
+</html>
